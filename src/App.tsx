@@ -1,4 +1,4 @@
-import { Suspense, createContext, lazy, useEffect, useState } from 'react';
+import { Suspense, createContext, useEffect, useState } from 'react';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import Layout from './pages/Layout/Layout';
 import Private from './assets/hocs/PrivateRoutes';
