@@ -75,16 +75,12 @@ function App() {
   return (
     <>
       <UserContext.Provider value={state}>
-        <BrowserRouter>
+        <BrowserRouter basename="/To-Do-App">
           <Suspense fallback="Loading...">
             <Routes>
               <Route path="*" element={<Navigate to="/" />} />
               <Route path="/" element={<Layout />}>
-                <Route
-                  index
-                  element={<SignPage />}
-                  // element={<SignPage loginHandler={loginHandler} />}
-                />
+                <Route index element={<SignPage />} />
                 <Route
                   path="/active"
                   index
