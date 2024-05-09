@@ -1,0 +1,39 @@
+.formWrapper {
+  width: 100vw;
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  width: 80dvw;
+  max-width: 25rem;
+  margin: 0 auto;
+}
+
+.form input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.5rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  @include font(1.2rem, 1.5rem, 300);
+  color: $card-text;
+}
+
+.form input::placeholder {
+  @include font(1.2rem, 1.25rem, 300);
+}
+
+.form button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: $background-body;
+  @include font(1.2rem, 1.5rem, 300);
+  color: white;
+}

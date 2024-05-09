@@ -1,0 +1,66 @@
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+
+//$background-body: #e9edf3;
+
+// $progress-bar-color: #748d63;
+// $background-overlay: #8c8074;
+// $side-bar-text-color: #ece3dc;
+// $background-body: #507679;
+
+// $background-overlay: #4d6265;
+// $background-body: #10506f;
+// $progress-bar-color: #8a1616;
+// $side-bar-text-color: #e6f2ee;
+
+$background-overlay: #80a5a8;
+$background-body: #3e5a68;
+$progress-bar-color: #208b7f;
+$side-bar-text-color: #a0dee9;
+$card-background: #ffff;
+$card-text: #545b6d;
+$create-button-color: #563440;
+// $card-text: #d7dae0;
+
+$text: white;
+
+$background-header: #242424;
+$background-footer: #242424;
+$text-shadow: gray;
+$btn-background: #091336;
+// $card-background: #091336;
+// $card-text: white;
+
+$max-tablet-width: 1279px;
+$max-mobile-width: 780px;
+
+@mixin font($size: 14px, $heght: 17px, $weight: 300, $style: medium) {
+  font-family: 'SF Pro Display', sans-serif;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $heght;
+  font-style: $style;
+}
+
+/* @media (max-width: $max-tablet-width) {
+  .container {
+    max-width: 96%;
+  }
+}
+
+@media (max-width: $max-mobile-width) {
+  .container {
+    max-width: 96%;
+  }
+} */
+
+@mixin tablet {
+  @media (max-width: $max-tablet-width) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $max-mobile-width) {
+    @content;
+  }
+}

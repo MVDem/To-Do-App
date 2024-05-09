@@ -1,0 +1,129 @@
+.header {
+  height: 10vh;
+  background-color: $background-header;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.burgerBtn {
+  position: absolute;
+  top: 3dvh;
+  left: 3dvh;
+  border: none;
+  border-radius: 35%;
+  color: $background-overlay;
+  transition: 1.5s;
+}
+
+.burgerBtnActive {
+  position: absolute;
+  top: 3dvh;
+  left: 3dvh;
+  border: none;
+  border-radius: 35%;
+  color: $background-body;
+  transition: 0.6s;
+}
+.burgerBtn svg,
+.burgerBtnActive svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.main {
+  height: 100dvh;
+  background-color: $background-body;
+  padding-left: 1rem;
+  display: flex;
+  position: relative;
+}
+
+.sidebar {
+  padding-top: 15dvh;
+}
+
+.avatarContainer {
+  width: 40dvw;
+  height: 40dvw;
+  border: 5px solid $progress-bar-color;
+  border-radius: 50%;
+  background-image: url('../../../public/sticker.gif');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar ul {
+  width: 50dvw;
+  max-width: 20rem;
+  padding-top: 3rem;
+  background-color: $background-body;
+  display: flex;
+  flex-direction: column;
+  @include font(1.2rem, 1.25rem, 400);
+  color: $side-bar-text-color;
+  list-style: none;
+}
+
+.sidebar ul li {
+  margin: 1rem 0;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  @include font(1.2rem, 1.25rem, 400);
+  color: $side-bar-text-color;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  width: 100dvw;
+  height: 100dvh;
+  background-color: $background-overlay;
+  overflow: scroll;
+  z-index: 5;
+  transition: 1s;
+  left: 0;
+  scale: 1;
+}
+
+.overlaydesactive {
+  position: absolute;
+  top: 0;
+  width: 100dvw;
+  height: 100dvh;
+  border-radius: 2rem;
+  background-color: $background-overlay;
+  overflow: hidden;
+  z-index: 5;
+  transition: 1s;
+  left: 40%;
+  scale: 0.8;
+}
+
+.createBtn {
+  position: absolute;
+  bottom: 3dvh;
+  right: 3dvh;
+  z-index: 10;
+  border: none;
+  border-radius: 50%;
+  background-color: inherit;
+  overflow: hidden;
+  padding: 0;
+}
+
+.createBtn svg {
+  width: 3rem;
+  height: 3rem;
+  color: $create-button-color;
+}
+
+.footer {
+  height: 5dvh;
+  background-color: $background-footer;
+}
