@@ -4,6 +4,10 @@ import Layout from './pages/Layout/Layout';
 import Private from './assets/hocs/PrivateRoutes';
 import { State } from './models/models';
 import { defaultTodos } from './data';
+import SignPage from './pages/SignPage/SignPage';
+import ActiveTodoPage from './pages/ActiveTodoPage/ActiveTodoPage';
+import CreateTodoPage from './pages/CreateTodoPage/CreateTodoPage';
+import CompletedTodoPage from './pages/CompletedTodoPage/CompletedTodoPage';
 
 export const UserContext = createContext<State | null>(null);
 
@@ -56,17 +60,17 @@ function App() {
     });
   }, []);
 
-  const SignPage = lazy(() => import('./pages/SignPage/SignPage'));
-  const ActiveTodoPage = lazy(
-    () => import('./pages/ActiveTodoPage/ActiveTodoPage')
-  );
-  const CreateTodoPage = lazy(
-    () => import('./pages/CreateTodoPage/CreateTodoPage')
-  );
+  // const SignPage = lazy(() => import('./pages/SignPage/SignPage'));
+  // const ActiveTodoPage = lazy(
+  //   () => import('./pages/ActiveTodoPage/ActiveTodoPage')
+  // );
+  // const CreateTodoPage = lazy(
+  //   () => import('./pages/CreateTodoPage/CreateTodoPage')
+  // );
 
-  const CompletedTodoPage = lazy(
-    () => import('./pages/CompletedTodoPage/CompletedTodoPage')
-  );
+  // const CompletedTodoPage = lazy(
+  //   () => import('./pages/CompletedTodoPage/CompletedTodoPage')
+  // );
 
   return (
     <>

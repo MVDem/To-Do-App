@@ -79,7 +79,7 @@ function TodoItem({
                 className={styles.completeBtn}
                 onClick={() => handleAnimation('Completed')}
               >
-                Complete
+                {todo.completed ? 'Not Done' : 'Done'}
               </button>
             )}
           </div>

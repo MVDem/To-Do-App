@@ -3,7 +3,7 @@ import styles from './CompletedTodoPage.module.scss';
 import { UserContext } from '../../App';
 import TodoItem from '../../components/TodoItem/TodoItem';
 
-function ActiveTodoPage() {
+function CompletedTodoPage() {
   const state = useContext(UserContext);
   const [activeTodo, setActiveTodo] = useState<number>();
   const { todos } = state || {};
@@ -35,4 +35,4 @@ function ActiveTodoPage() {
   );
 }
 
-export default ActiveTodoPage;
+export default CompletedTodoPage;
