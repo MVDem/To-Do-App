@@ -124,9 +124,9 @@ function App() {
                   path="/create"
                   index
                   element={
-                    <Private>
-                      <CreateTodoPage />
-                    </Private>
+                    // <Private>
+                    <CreateTodoPage />
+                    // </Private>
                   }
                 />
                 <Route
@@ -142,11 +142,9 @@ function App() {
                   path="/categories"
                   index
                   element={
-                    <>
-                      <Private>
-                        <CategoriesPage />
-                      </Private>
-                    </>
+                    <Private>
+                      <CategoriesPage />
+                    </Private>
                   }
                 />
               </Route>

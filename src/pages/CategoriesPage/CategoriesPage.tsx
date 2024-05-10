@@ -5,32 +5,19 @@ import { IoAddCircle } from 'react-icons/io5';
 import { GrFormNextLink } from 'react-icons/gr';
 import Picker from '@emoji-mart/react';
 import data from '@emoji-mart/data';
-// import { CategoriesList } from '../../models/models';
 import { UserContext } from '../../App';
 
 function CategoriesPage() {
-  //   const [categories, setCategories] = useState<CategoriesList[]>([
-  //     { title: 'Work', id: 1, emoji: '💼' },
-  //     { title: 'Home', id: 2, emoji: '🏠' },
-  //     { title: 'Sport', id: 3, emoji: '🏋️' },
-  //   ]);
   const categories = useContext(UserContext)?.categories;
 
   const [action, setAction] = useState('button');
   const [title, setTitle] = useState('');
 
   const handleDelete = (id: number) => {
-    // const newCategories = categories?.categoriesList?.filter(
-    //   (e) => e.id !== id || []
-    // );
     categories?.onDelete!(id);
   };
 
   const handleAdd = (emoji: string) => {
-    // const newCategories = [
-    //   ...categories?.categoriesList!,
-    //   { title, emoji, id: categories?.categoriesList?.length! + 1 },
-    // ];
     categories?.onAdd!({
       title,
       emoji,

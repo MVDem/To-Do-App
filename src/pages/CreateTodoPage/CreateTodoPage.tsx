@@ -15,18 +15,28 @@ function CreateTodoPage() {
     const _title = data.get('title')?.toString();
     const _description = data.get('description')?.toString();
     const _deadLine = data.get('deadLine')?.toString();
-    if (_title && _description && _deadLine) {
+    const _categoryId = data.get('categoryId')?.toString();
+    if (_title && _description && _deadLine && _categoryId) {
       const newTodo: Todo = {
         id: Date.now(),
         title: _title!,
         description: _description!,
         deadline: new Date(_deadLine!).getTime(),
+        categoryId: +_categoryId,
         completed: false,
       };
       state?.todos?.setTodos!(
         getSortedTodos([...state?.todos?.todoList!, newTodo])
       );
       navigate('/active');
+    }
+    if (!_categoryId) {
+      e.currentTarget.getElementsByTagName('select')[0].focus();
+      e.currentTarget.getElementsByTagName('select')[0].style.borderColor =
+        'red';
+    } else {
+      e.currentTarget.getElementsByTagName('select')[0].style.borderColor =
+        '#ced4da';
     }
     if (!_deadLine) {
       e.currentTarget.getElementsByTagName('input')[2].focus();
@@ -63,6 +73,14 @@ function CreateTodoPage() {
         <input type="text" placeholder="My To Do" name="title" />
         <input type="text" placeholder="Description" name="description" />
         <input type="date" name="deadLine" />
+        <select name="categoryId">
+          {state?.categories?.categoriesList?.map((category) => (
+            <option key={category.id} value={category.id}>
+              {category.emoji}
+              {category.title}
+            </option>
+          ))}
+        </select>
         <button type="submit">Add</button>
       </form>
     </>

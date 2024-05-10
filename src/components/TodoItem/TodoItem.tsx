@@ -20,7 +20,7 @@ function TodoItem({
   const [_isActive, _setIsActive] = useState(isActive);
   const categories = useContext(UserContext)?.categories;
   const itemOpacity = todo.completed ? 0.8 : 1;
-  const emoji = categories?.categoriesList![todo.categoryId]?.emoji;
+  const emoji = categories?.categoriesList![todo.categoryId - 1]?.emoji;
 
   useEffect(() => {
     _setIsActive(isActive);

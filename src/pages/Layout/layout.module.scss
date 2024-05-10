@@ -46,8 +46,8 @@
 }
 
 .avatarContainer {
-  width: 40dvw;
-  height: 40dvw;
+  width: 40dvh;
+  height: 40dvh;
   border: 5px solid $progress-bar-color;
   border-radius: 50%;
   background-image: url('../../../public/sticker.gif');
@@ -55,6 +55,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@include mobile {
+  .avatarContainer {
+    width: 40dvw;
+    height: 40dvw;
+  }
 }
 
 .sidebar ul {
