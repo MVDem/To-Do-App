@@ -8,6 +8,7 @@ import SignPage from './pages/SignPage/SignPage';
 import ActiveTodoPage from './pages/ActiveTodoPage/ActiveTodoPage';
 import CreateTodoPage from './pages/CreateTodoPage/CreateTodoPage';
 import CompletedTodoPage from './pages/CompletedTodoPage/CompletedTodoPage';
+import CategoriesPage from './pages/CategoriesPage/CategoriesPage';
 
 export const UserContext = createContext<State | null>(null);
 
@@ -53,6 +54,35 @@ function App() {
             return {
               ...prev,
               todos: { ...prev?.todos, todoList: todos || [] },
+            };
+          });
+        },
+      },
+      categories: {
+        categoriesList: [
+          { title: 'Work', id: 1, emoji: '💼' },
+          { title: 'Home', id: 2, emoji: '🏠' },
+          { title: 'Sport', id: 3, emoji: '🏋️' },
+        ],
+        onAdd: (category) => {
+          setState((prev) => {
+            const categories = prev?.categories?.categoriesList
+              ? [...prev.categories.categoriesList, category]
+              : [category];
+            return {
+              ...prev,
+              categories: { ...prev?.categories, categoriesList: categories },
+            };
+          });
+        },
+        onDelete: (id) => {
+          setState((prev) => {
+            const categories = prev?.categories?.categoriesList?.filter(
+              (category) => category.id !== id
+            );
+            return {
+              ...prev,
+              categories: { ...prev?.categories, categoriesList: categories },
             };
           });
         },
@@ -106,6 +136,17 @@ function App() {
                     <Private>
                       <CompletedTodoPage />
                     </Private>
+                  }
+                />
+                <Route
+                  path="/categories"
+                  index
+                  element={
+                    <>
+                      <Private>
+                        <CategoriesPage />
+                      </Private>
+                    </>
                   }
                 />
               </Route>

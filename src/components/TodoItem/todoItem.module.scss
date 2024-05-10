@@ -26,6 +26,17 @@
   align-items: center;
 }
 
+.topContainer .emoji {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+  font-size: 2rem;
+}
+
 .topContainer h5 {
   padding: 0;
   margin: 0;

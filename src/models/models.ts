@@ -4,11 +4,13 @@ export interface Todo {
   description: string;
   deadline: number;
   completed: boolean;
+  categoryId: number;
 }
 
 export interface State {
   todos?: Todos;
   user?: User;
+  categories?: Categories;
 }
 export interface User {
   username?: string;
@@ -19,4 +21,16 @@ export interface Todos {
   setTodos?: (todos: Todo[]) => void;
   onToggle?: (id: number) => void;
   onRemove?: (id: number) => void;
+}
+
+export interface Categories {
+  categoriesList?: CategoriesList[];
+  onAdd?: (category: CategoriesList) => void;
+  onDelete?: (id: number) => void;
+}
+
+export interface CategoriesList {
+  id: number;
+  title: string;
+  emoji?: string;
 }

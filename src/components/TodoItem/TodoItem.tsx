@@ -1,7 +1,8 @@
 import { Todo } from '../../models/models';
 import styles from './todoItem.module.scss';
 import AnimationComplete from '../AnimationComplete/AnimtionComplete';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
+import { UserContext } from '../../App';
 
 function TodoItem({
   todo,
@@ -17,7 +18,9 @@ function TodoItem({
   const [animationToggleStart, setAnimationToggleStart] = useState(false);
   const [label, setLabel] = useState('');
   const [_isActive, _setIsActive] = useState(isActive);
+  const categories = useContext(UserContext)?.categories;
   const itemOpacity = todo.completed ? 0.8 : 1;
+  const emoji = categories?.categoriesList![todo.categoryId]?.emoji;
 
   useEffect(() => {
     _setIsActive(isActive);
@@ -52,6 +55,7 @@ function TodoItem({
     <AnimationComplete start={animationToggleStart} label={label}>
       <div className={styles.todoItem} style={{ opacity: itemOpacity }}>
         <div className={styles.topContainer}>
+          <div className={styles.emoji}>{emoji}</div>
           <h5>{todo.title}</h5>
           <p style={{ color: styleDedline(todo.deadline) }}>
             {getDate(todo.deadline)}

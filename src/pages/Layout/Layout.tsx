@@ -30,13 +30,20 @@ function Layout() {
         {state?.user?.username && (
           <section className={styles.sidebar}>
             <div className={styles.avatarContainer}></div>
+
             <nav className={styles.nav}>
               <ul>
+                <li>
+                  <h2>Hi, {state?.user?.username} !</h2>
+                </li>
                 <li>
                   <NavLink to={'/active'}>Active To Do</NavLink>
                 </li>
                 <li>
                   <NavLink to={'/completed'}>Completed To Do</NavLink>
+                </li>
+                <li>
+                  <NavLink to={'/categories'}>Categories</NavLink>
                 </li>
               </ul>
             </nav>

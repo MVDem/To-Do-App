@@ -5,6 +5,7 @@ export const defaultTodos = [
     description:
       'lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec nisl tincidunt tincidunt. ',
     deadline: new Date('2024-05-20').getTime(),
+    categoryId: 1,
     completed: false,
   },
   {
@@ -13,6 +14,7 @@ export const defaultTodos = [
     description:
       'lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec nisl tincidunt tincidunt. ',
     deadline: new Date('2024-05-10').getTime(),
+    categoryId: 2,
     completed: false,
   },
   {
@@ -21,6 +23,7 @@ export const defaultTodos = [
     description:
       'lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec nisl tincidunt tincidunt. ',
     deadline: new Date('2024-06-20').getTime(),
+    categoryId: 2,
     completed: false,
   },
   {
@@ -29,6 +32,7 @@ export const defaultTodos = [
     description:
       'lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec nisl tincidunt tincidunt. ',
     deadline: new Date('2024-05-01').getTime(),
+    categoryId: 3,
     completed: false,
   },
   {
@@ -37,6 +41,7 @@ export const defaultTodos = [
     description:
       'lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec nisl tincidunt tincidunt. ',
     deadline: new Date('2024-05-20').getTime(),
+    categoryId: 2,
     completed: false,
   },
   {
@@ -45,6 +50,7 @@ export const defaultTodos = [
     description:
       'lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec nisl tincidunt tincidunt. ',
     deadline: new Date('2024-04-07').getTime(),
+    categoryId: 2,
     completed: false,
   },
   {
@@ -53,6 +59,7 @@ export const defaultTodos = [
     description:
       'lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec nisl tincidunt tincidunt. ',
     deadline: new Date('2024-05-15').getTime(),
+    categoryId: 1,
     completed: false,
   },
   {
@@ -61,6 +68,7 @@ export const defaultTodos = [
     description:
       'lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec nisl tincidunt tincidunt. ',
     deadline: new Date('2024-05-20').getTime(),
+    categoryId: 1,
     completed: false,
   },
   {
@@ -69,6 +77,7 @@ export const defaultTodos = [
     description:
       'lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec nisl tincidunt tincidunt. ',
     deadline: new Date('2024-05-22').getTime(),
+    categoryId: 2,
     completed: false,
   },
   {
@@ -77,6 +86,7 @@ export const defaultTodos = [
     description:
       'lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec nisl tincidunt tincidunt. ',
     deadline: new Date('2024-06-10').getTime(),
+    categoryId: 3,
     completed: false,
   },
   {
@@ -85,6 +95,7 @@ export const defaultTodos = [
     description:
       'lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec nisl tincidunt tincidunt. ',
     deadline: new Date('2024-06-20').getTime(),
+    categoryId: 3,
     completed: false,
   },
   {
@@ -93,6 +104,7 @@ export const defaultTodos = [
     description:
       'lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec nisl tincidunt tincidunt. ',
     deadline: new Date('2024-06-20').getTime(),
+    categoryId: 2,
     completed: false,
   },
   {
@@ -101,6 +113,7 @@ export const defaultTodos = [
     description:
       'lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec nisl tincidunt tincidunt. ',
     deadline: new Date('2024-06-20').getTime(),
+    categoryId: 2,
     completed: false,
   },
   {
@@ -109,6 +122,7 @@ export const defaultTodos = [
     description:
       'lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec nisl tincidunt tincidunt. ',
     deadline: new Date('2024-06-20').getTime(),
+    categoryId: 2,
     completed: false,
   },
   {
@@ -117,6 +131,7 @@ export const defaultTodos = [
     description:
       'lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec nisl tincidunt tincidunt. ',
     deadline: new Date('2024-06-20').getTime(),
+    categoryId: 3,
     completed: false,
   },
   {
@@ -125,6 +140,7 @@ export const defaultTodos = [
     description:
       'lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec nisl tincidunt tincidunt. ',
     deadline: new Date('2024-06-20').getTime(),
+    categoryId: 1,
     completed: false,
   },
 ];
